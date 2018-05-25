@@ -1,3 +1,5 @@
+import uuid from 'uuid/v4'
+
 export const state = () => ({
   items: []
 })
@@ -10,7 +12,7 @@ export const getters = {
 
 export const mutations = {
   add(state, todo) {
-    state.items.push({ content: todo })
+    state.items.push({ content: todo, id: uuid() })
   }
 }
 
