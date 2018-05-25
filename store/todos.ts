@@ -1,6 +1,15 @@
 import uuid from 'uuid/v4'
 
-export const state = () => ({
+type Todo = {
+  content: string;
+  id: string;
+}
+
+type TodoState = {
+  items: Array<Todo>;
+}
+
+export const state = (): TodoState => ({
   items: []
 })
 
@@ -12,7 +21,7 @@ export const getters = {
 
 export const mutations = {
   add(state, todo) {
-    state.items.push({ content: todo, id: uuid() })
+    state.items.push({ content: todo })
   }
 }
 
