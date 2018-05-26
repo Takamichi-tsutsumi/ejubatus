@@ -17,6 +17,7 @@ module.exports = {
   plugins: ['vue'],
   // add your custom rules here
   rules: {
-    semi: 0
+    semi: 0,
+    'no-console': 1
   }
 }
