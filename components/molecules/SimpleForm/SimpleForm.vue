@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="form-container">
     <form v-on:submit="onSubmit" id="form">
       <input type="text" name="todo" />
     </form>
@@ -24,8 +24,8 @@ export default {
 </script>
 
 
-<style>
-.container {
+<style scoped>
+.form-container {
   display: flex;
 }
 
